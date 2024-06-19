@@ -1,0 +1,10 @@
+# terraform init -backend-config="prod.s3.tfbackend" -migrate-state
+# terraform plan
+# terraform apply
+
+# in CI/CD pipeline we would run terraform init -backend-config=... each time
+# so we got no problems within the pipeline
+
+bucket = "learn-terraform-bucket-xyc"
+region = "eu-central-1"
+key = "backend/prod/state.tfstate"
