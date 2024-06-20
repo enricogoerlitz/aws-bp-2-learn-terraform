@@ -1,4 +1,5 @@
 terraform {
+  required_version = "~> v1.8.5"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -9,15 +10,13 @@ terraform {
       version = "~> 3.0"
     }
   }
-
-  backend "s3" {
-    bucket = "learn-terraform-bucket-xyc"
-    region = "eu-central-1"
-    key    = "state.tfstate"
-    # dynamodb_table = "tablename"
-  }
 }
 
 provider "aws" {
   region = "eu-central-1"
+}
+
+provider "aws" {
+  region = "eu-west-2"
+  alias  = "eu_west_2"
 }
