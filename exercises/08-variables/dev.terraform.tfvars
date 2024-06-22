@@ -2,5 +2,5 @@
 
 additional_tags = {
   "ValuesFrom" = "dev.terraform.tfvars"
-  "Env" = "Dev"
+  "Env"        = "Dev"
 }

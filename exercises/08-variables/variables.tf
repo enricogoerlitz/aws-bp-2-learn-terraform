@@ -28,13 +28,13 @@ variable "s3_bucket_config" {
 }
 
 variable "additional_tags" {
-  type = map(string)  # Name="Test" Env="Prod"
+  type = map(string) # Name="Test" Env="Prod"
   # default = {
   #   Name      = "name"
   #   Env       = "Prod"
   #   ManagedBy = "Terraform"
   # }
-  
+
   # use: tags = merge(additional_tags, {}) in tags...
 }
 
